@@ -190,8 +190,8 @@ void Game::initialize()
 	triangles[12] = 3; triangles[13] = 2; triangles[14] = 6; // RightL
 	triangles[15] = 3; triangles[16] = 6; triangles[17] = 7; // RightR
 
-	triangles[18] = 7; triangles[19] = 6; triangles[20] = 5; // BackL
-	triangles[21] = 7; triangles[22] = 5; triangles[23] = 4; // BackR
+	triangles[18] = 4; triangles[19] = 6; triangles[20] = 7; // BackL
+	triangles[21] = 4; triangles[22] = 5; triangles[23] = 6; // BackR
 
 	triangles[24] = 1; triangles[25] = 5; triangles[26] = 6; // TopL
 	triangles[27] = 1; triangles[28] = 6; triangles[29] = 2; // TopR
@@ -417,7 +417,7 @@ void Game::render()
 
 	/*	As the data positions will be updated by the this program on the
 		CPU bind the updated data to the GPU for drawing	*/
-	glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * 7, vertex, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * 8, vertex, GL_STATIC_DRAW);
 
 	/*	Draw Triangle from VBO	(set where to start from as VBO can contain
 		model components that 'are' and 'are not' to be drawn )	*/
